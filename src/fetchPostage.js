@@ -1,0 +1,1 @@
+export const fetchPostage = (count) => Promise.resolve(8 * count)
