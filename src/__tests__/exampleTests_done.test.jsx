@@ -54,7 +54,7 @@ describe("formatDate", () => {
 
 function UserInfo({ user }) {
   const date = formatDate(user.birthday)
-  const day = moment(user.birthday).format("dddd")
+  const day = format(new Date(user.birthday), "EEEE")
 
   return (
     <div>
@@ -63,14 +63,13 @@ function UserInfo({ user }) {
   )
 }
 
-xdescribe("UserInfo", () => {
+describe("UserInfo", () => {
   const user = { name: "Bob", birthday: "2001-10-12" }
 
   it("shows the user name and birthday", () => {
     const { container } = render(<UserInfo user={user} />)
 
-    expect(container).toHaveTextContent("??")
-    // Bob was born on 2001-10-4 (Thursday)
+    expect(container).toHaveTextContent("Bob was born on 2001-10-12 (Friday)")
   })
 
   it("matches the snapshot", () => {
