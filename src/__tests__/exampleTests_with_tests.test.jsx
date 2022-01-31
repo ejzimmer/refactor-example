@@ -1,5 +1,8 @@
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
 import moment from "moment"
+import { useEffect, useState } from "react"
+import { act } from "react-dom/test-utils"
 
 function formatDate(date) {
   if (!date) return ""
@@ -72,5 +75,77 @@ describe("UserInfo", () => {
     const { container } = render(<UserInfo user={user} />)
 
     expect(container).toMatchSnapshot()
+  })
+})
+
+function Increment({ initialNumber }) {
+  const [number, setNumber] = useState(initialNumber)
+
+  const incrementNumber = () => setNumber((n) => ++n)
+
+  return (
+    <>
+      {number}
+      <button onClick={incrementNumber}>+</button>
+    </>
+  )
+}
+
+describe("Increment", () => {
+  it("increments the number", () => {
+    const { container } = render(<Increment initialNumber={4} />)
+
+    expect(container).toMatchSnapshot()
+
+    const button = screen.getByRole("button")
+    userEvent.click(button)
+
+    expect(container).toMatchSnapshot()
+  })
+
+  it("increments the number", () => {
+    render(<Increment initialNumber={4} />)
+
+    expect(screen.getByText("4")).toBeInTheDocument()
+
+    const button = screen.getByRole("button")
+    userEvent.click(button)
+
+    expect(screen.getByText("5")).toBeInTheDocument()
+  })
+})
+
+function Clickymajig() {
+  const [checked, setChecked] = useState(false)
+
+  useEffect(() => {
+    if (checked) {
+      setTimeout(() => setChecked(false), 3000)
+    }
+  })
+
+  return (
+    <input
+      type="checkbox"
+      checked={checked}
+      onChange={() => setChecked(true)}
+    />
+  )
+}
+
+describe("Clickymajig", () => {
+  it("unchecks the checkbox after 2 seconds", () => {
+    jest.useFakeTimers()
+    const { container } = render(<Clickymajig />)
+
+    const checkbox = screen.getByRole("checkbox")
+    userEvent.click(checkbox)
+
+    expect(container).toMatchSnapshot()
+
+    act(() => jest.advanceTimersByTime(2000))
+    expect(container).toMatchSnapshot()
+
+    jest.useRealTimers()
   })
 })

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Clickymajig unchecks the checkbox after 2 seconds 1`] = `
+<div>
+  <input
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Clickymajig unchecks the checkbox after 2 seconds 2`] = `
+<div>
+  <input
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`Increment increments the number 1`] = `
+<div>
+  4
+  <button>
+    +
+  </button>
+</div>
+`;
+
+exports[`Increment increments the number 2`] = `
+<div>
+  5
+  <button>
+    +
+  </button>
+</div>
+`;
+
+exports[`UserInfo matches the snapshot 1`] = `
+<div>
+  <div>
+    Bob
+     was born on 
+    2001-10-12
+     (
+    Friday
+    )
+  </div>
+</div>
+`;
