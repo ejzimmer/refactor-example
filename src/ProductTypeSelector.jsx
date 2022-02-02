@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 export function ProductTypeSelector({ onChange, value }) {
   const handleChange = (event) => {
@@ -7,13 +7,26 @@ export function ProductTypeSelector({ onChange, value }) {
   }
 
   return (
-    <fieldset>
-      <label> 
-        <input type="radio" name="product_type" value="seed" checked={value === 'seed'} onChange={handleChange} />
-          Seeds
+    <fieldset style={{ display: "flex", gap: "1.5em" }}>
+      <legend>Product type</legend>
+      <label>
+        <input
+          type="radio"
+          name="product_type"
+          value="seed"
+          checked={value === "seed"}
+          onChange={handleChange}
+        />
+        Seeds
       </label>
       <label>
-        <input type="radio" name="product_type" value="seedling" checked={value === 'seedling' } onChange={handleChange} />
+        <input
+          type="radio"
+          name="product_type"
+          value="seedling"
+          checked={value === "seedling"}
+          onChange={handleChange}
+        />
         Seedlings
       </label>
     </fieldset>
