@@ -13,18 +13,18 @@ export function ProductTypeSelector({ onChange, value }) {
         <input
           type="radio"
           name="product_type"
-          value="seed"
-          checked={value === "seed"}
+          value="seed_packets"
+          checked={value === "seed_packets"}
           onChange={handleChange}
         />
-        Seeds
+        Seed Packets
       </label>
       <label>
         <input
           type="radio"
           name="product_type"
-          value="seedling"
-          checked={value === "seedling"}
+          value="seedlings"
+          checked={value === "seedlings"}
           onChange={handleChange}
         />
         Seedlings
