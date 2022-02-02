@@ -2,14 +2,15 @@ import "./App.css"
 import { ProductTypeSelector } from "./ProductTypeSelector"
 import { fetchPostage } from "./fetchPostage"
 import { useState } from "react"
+import styled from "styled-components"
 
 const PRICES = {
-  SEEDS: 4,
+  SEED_PACKETS: 4,
   SEEDLINGS: 8,
 }
 
 export function Product({ product }) {
-  const [productType, setProductType] = useState("seed")
+  const [productType, setProductType] = useState("seed_packets")
   const [count, setCount] = useState(0)
   const [postage, setPostage] = useState(-1)
 
@@ -23,7 +24,7 @@ export function Product({ product }) {
   }
 
   const calculatePostage = async (count, setPostage) => {
-    if (productType == "seeds") return
+    if (productType == "seed_packets") return
 
     if (count == 0) {
       setPostage(0)
@@ -34,58 +35,76 @@ export function Product({ product }) {
   }
 
   return (
-    <section
-      style={{
-        display: "grid",
-        gridTemplateColumns: "30vw 30vw",
-        gap: "20px",
-      }}
-    >
-      <h2 style={{ gridColumn: "1/-1", textTransform: "capitalize" }}>
-        {product}
-      </h2>
-      <img style={{ width: "100%" }} src={`${product}.jpg`} alt={product} />
-      <form style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <Container>
+      <Heading>{product}</Heading>
+      <ProductImage src={`${product}.jpg`} alt={product} />
+      <Form>
         <ProductTypeSelector
           onChange={handleProductTypeChange}
           value={productType}
         />
         <div>
-          {productType == "seed" && (
+          {productType == "seed_packets" && (
             <label htmlFor="count">
               Number of seed packets (${PRICES.SEEDS} * {count} = $
               {PRICES.SEEDS * count})
             </label>
           )}
-          {productType == "seedling" && (
+          {productType == "seedlings" && (
             <label htmlFor="count">
               Number of seedlings (${PRICES.SEEDLINGS} * {count} = $
               {PRICES.SEEDLINGS * count})
             </label>
           )}
-          <input type="number" onChange={handleCountChange} />
+          <br />
+          <input id="count" type="number" onChange={handleCountChange} />
         </div>
-        {productType == "seed" && (
-          <label style={{ color: "green" }}>Postage = $8</label>
+        {productType == "seed_packets" && <Postage>Postage = $8</Postage>}
+        {productType != "seed_packets" && postage >= 0 && (
+          <Postage>Postage = ${postage}</Postage>
         )}
-        {productType != "seed" && postage >= 0 && (
-          <label style={{ color: "green" }}>Postage = ${postage}</label>
-        )}
-        {productType != "seed" && postage < 0 && (
-          <label style={{ color: "red" }}>
-            Could not calculate postage. Please contact us.
-          </label>
+        {productType != "seed_packets" && postage < 0 && (
+          <Error>Could not calculate postage. Please contact us.</Error>
         )}
 
-        {productType == "seed" && (
-          <label>Total: ${PRICES.SEEDS * count + 8}</label>
+        {productType == "seed_packets" && (
+          <Total>Total: ${PRICES.SEEDS * count + 8}</Total>
         )}
-        {productType != "seed" && (
-          <label style={{ fontWeight: "bold" }}>
-            Total: ${PRICES.SEEDLINGS * count + postage}
-          </label>
+        {productType != "seed_packets" && (
+          <Total>Total: ${PRICES.SEEDLINGS * count + postage}</Total>
         )}
-      </form>
-    </section>
+      </Form>
+    </Container>
   )
 }
+
+const Container = styled.section`
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  gap: 20px;
+`
+
+const Heading = styled.h2`
+  grid-column: 1/-1;
+  text-transform: capitalize;
+`
+
+const ProductImage = styled.img`
+  width: 100%;
+`
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`
+
+const Postage = styled.div`
+  color: green;
+`
+const Error = styled.div`
+  color: red;
+`
+const Total = styled.div`
+  font-weight: bold;
+`
