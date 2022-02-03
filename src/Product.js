@@ -3,11 +3,7 @@ import { ProductTypeSelector } from "./ProductTypeSelector"
 import { fetchPostage } from "./fetchPostage"
 import { useState } from "react"
 import styled from "styled-components"
-
-const PRICES = {
-  SEED_PACKETS: 4,
-  SEEDLINGS: 8,
-}
+import { PRICES } from "./prices"
 
 export function Product({ product }) {
   const [productType, setProductType] = useState("seed_packets")
