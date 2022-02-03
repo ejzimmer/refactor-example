@@ -42,7 +42,7 @@ export function Product({ product }) {
         <div>
           {productType == "seed_packets" && (
             <label htmlFor="count">
-              Number of seed packets (${PRICES.SEEDS} * {count} = $
+              Number of seed packets (${PRICES.SEED_PACKETS} * {count} = $
               {PRICES.SEEDS * count})
             </label>
           )}
@@ -64,7 +64,7 @@ export function Product({ product }) {
         )}
 
         {productType == "seed_packets" && (
-          <Total>Total: ${PRICES.SEEDS * count + 8}</Total>
+          <Total>Total: ${PRICES.SEED_PACKETS * count + 8}</Total>
         )}
         {productType != "seed_packets" && (
           <Total>Total: ${PRICES.SEEDLINGS * count + postage}</Total>
