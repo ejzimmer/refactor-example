@@ -8,8 +8,7 @@ Slides are available at [https://refactor-tractor.ez.codes]
 - `completed_examples/exampleTests_with_tests.test.jsx`: with the tests
 - `completed_examples/exampleTests_done.test.jsx`: with the refactor of formatDate
 
-The `Product` component is under `src/Product.js`. There is also a propery refactored version of the
-label (with the new plant product added) in `src/CountInput.tsx`
+And there's a version of Ye Olde Farme Shoppe with the new requirements on the branch `complete`
 
 ## Available Scripts
 
