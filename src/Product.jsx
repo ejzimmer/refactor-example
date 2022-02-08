@@ -53,7 +53,12 @@ export function Product({ product }) {
             </label>
           )}
           <br />
-          <input id="count" type="number" onChange={handleCountChange} />
+          <input
+            id="count"
+            type="number"
+            onChange={handleCountChange}
+            value={count}
+          />
         </div>
         {productType == "SEED_PACKETS" && <Postage>Postage = $8</Postage>}
         {productType != "SEED_PACKETS" && postage >= 0 && (
