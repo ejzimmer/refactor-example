@@ -17,3 +17,9 @@ function UserInfo({ user }) {
     </div>
   )
 }
+
+describe("fake", () => {
+  it("must have a test", () => {
+    expect(true).toBe(true)
+  })
+})
