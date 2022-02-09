@@ -17,9 +17,3 @@ function UserInfo({ user }) {
     </div>
   )
 }
-
-describe("the test suite", () => {
-  it("has at least one test", () => {
-    expect(true).toBe(true)
-  })
-})
