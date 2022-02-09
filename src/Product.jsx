@@ -1,14 +1,14 @@
 import "./App.css"
 import { ProductTypeSelector } from "./ProductTypeSelector"
 import { fetchPostage } from "./fetchPostage"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import { PRICES } from "./prices"
 
 export function Product({ product }) {
   const [productType, setProductType] = useState("SEED_PACKETS")
   const [count, setCount] = useState(0)
-  const [postage, setPostage] = useState(-1)
+  const [postage, setPostage] = useState(0)
 
   const handleProductTypeChange = (productType) => {
     setProductType(productType)
@@ -16,10 +16,13 @@ export function Product({ product }) {
 
   const handleCountChange = (event) => {
     setCount(event.currentTarget.value)
-    calculatePostage(event.currentTarget.value, setPostage)
   }
 
-  const calculatePostage = async (count, setPostage) => {
+  useEffect(() => {
+    calculatePostage()
+  }, [productType, count])
+
+  const calculatePostage = async () => {
     if (productType == "SEED_PACKETS") return
 
     if (count == 0) {
