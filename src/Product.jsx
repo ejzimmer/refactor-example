@@ -3,9 +3,9 @@ import { ProductTypeSelector } from "./ProductTypeSelector"
 import { fetchPostage } from "./fetchPostage"
 import { useState, useEffect } from "react"
 import styled from "styled-components"
-import { PRICES } from "./prices"
 import { Postage } from "./Postage"
 import { NumberInput } from "./NumberInput"
+import { Total } from "./Total"
 
 export function Product({ product }) {
   const [productType, setProductType] = useState("SEED_PACKETS")
@@ -56,14 +56,7 @@ export function Product({ product }) {
           />
         </div>
         <Postage postage={postage} />
-
-        {count === "" ? (
-          <Total>Please enter a number to see the total</Total>
-        ) : productType == "SEED_PACKETS" ? (
-          <Total>Total: ${PRICES.SEED_PACKETS * count + 8}</Total>
-        ) : (
-          <Total>Total: ${PRICES.SEEDLINGS * count + postage}</Total>
-        )}
+        <Total productType={productType} count={count} postage={postage} />
       </Form>
     </Container>
   )
@@ -88,8 +81,4 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-`
-
-const Total = styled.div`
-  font-weight: bold;
 `

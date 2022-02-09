@@ -3,20 +3,20 @@
 exports[`Product matches the snapshot when seed packets is selected and a number is entered 1`] = `
 <div>
   <section
-    class="sc-dkPtRN nDuhm"
+    class="sc-hKwDye bHYLkR"
   >
     <h2
-      class="sc-hKwDye hGlFEk"
+      class="sc-eCImPb opaLQ"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-eCImPb fgWRvk"
+      class="sc-jRQBWg csmCrb"
       src="corn.jpg"
     />
     <form
-      class="sc-jRQBWg kUMRfR"
+      class="sc-gKclnd jlcuhb"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -70,7 +70,7 @@ exports[`Product matches the snapshot when seed packets is selected and a number
         8
       </div>
       <div
-        class="sc-gKclnd bIyqbA"
+        class="sc-dkPtRN kRyTEO"
       >
         Total: $
         24
@@ -83,20 +83,20 @@ exports[`Product matches the snapshot when seed packets is selected and a number
 exports[`Product matches the snapshot when seed packets is selected and no number is entered 1`] = `
 <div>
   <section
-    class="sc-dkPtRN nDuhm"
+    class="sc-hKwDye bHYLkR"
   >
     <h2
-      class="sc-hKwDye hGlFEk"
+      class="sc-eCImPb opaLQ"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-eCImPb fgWRvk"
+      class="sc-jRQBWg csmCrb"
       src="corn.jpg"
     />
     <form
-      class="sc-jRQBWg kUMRfR"
+      class="sc-gKclnd jlcuhb"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -150,7 +150,7 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
         8
       </div>
       <div
-        class="sc-gKclnd bIyqbA"
+        class="sc-dkPtRN kRyTEO"
       >
         Please enter a number to see the total
       </div>
@@ -162,20 +162,20 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
 exports[`Product matches the snapshot when seedlings is selected and a number is entered 1`] = `
 <div>
   <section
-    class="sc-dkPtRN nDuhm"
+    class="sc-hKwDye bHYLkR"
   >
     <h2
-      class="sc-hKwDye hGlFEk"
+      class="sc-eCImPb opaLQ"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-eCImPb fgWRvk"
+      class="sc-jRQBWg csmCrb"
       src="corn.jpg"
     />
     <form
-      class="sc-jRQBWg kUMRfR"
+      class="sc-gKclnd jlcuhb"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -229,7 +229,7 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
         32
       </div>
       <div
-        class="sc-gKclnd bIyqbA"
+        class="sc-dkPtRN kRyTEO"
       >
         Total: $
         64
@@ -242,20 +242,20 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
 exports[`Product matches the snapshot when seedlings is selected and no number is entered 1`] = `
 <div>
   <section
-    class="sc-dkPtRN nDuhm"
+    class="sc-hKwDye bHYLkR"
   >
     <h2
-      class="sc-hKwDye hGlFEk"
+      class="sc-eCImPb opaLQ"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-eCImPb fgWRvk"
+      class="sc-jRQBWg csmCrb"
       src="corn.jpg"
     />
     <form
-      class="sc-jRQBWg kUMRfR"
+      class="sc-gKclnd jlcuhb"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -309,7 +309,7 @@ exports[`Product matches the snapshot when seedlings is selected and no number i
         0
       </div>
       <div
-        class="sc-gKclnd bIyqbA"
+        class="sc-dkPtRN kRyTEO"
       >
         Please enter a number to see the total
       </div>
