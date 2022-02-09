@@ -9,6 +9,7 @@ Slides are available at [https://refactor-tractor.ez.codes]
 - `completed_examples/exampleTests_done.test.jsx`: with the refactor of formatDate
 
 And there's a version of Ye Olde Farme Shoppe with the new requirements on the branch `complete`
+It's worth noting, that for each change we needed to make, refactoring code made the actual change required trivial. They became config changes rather than real code changes.
 
 ## Available Scripts
 
