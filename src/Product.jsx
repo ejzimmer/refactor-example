@@ -15,8 +15,8 @@ export function Product({ product }) {
     setProductType(productType)
   }
 
-  const handleCountChange = (event) => {
-    setCount(event.currentTarget.value)
+  const handleCountChange = (count) => {
+    setCount(count)
   }
 
   useEffect(() => {

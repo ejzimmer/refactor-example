@@ -15,7 +15,12 @@ export function NumberInput({ productType, count, onCountChange }) {
         {price * number})
       </label>
       <br />
-      <input id="count" type="number" onChange={onCountChange} value={count} />
+      <input
+        id="count"
+        type="number"
+        onChange={(event) => onCountChange(event.currentTarget.value)}
+        value={count}
+      />
     </>
   )
 }
