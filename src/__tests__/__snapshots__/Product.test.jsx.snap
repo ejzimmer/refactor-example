@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product matches the snapshot when seed packets is selected and a number is entered 1`] = `
+<div>
+  <section
+    class="sc-bdvvtL hwPGVL"
+  >
+    <h2
+      class="sc-gsDKAQ cmDmbb"
+    >
+      corn
+    </h2>
+    <img
+      alt="corn"
+      class="sc-dkPtRN kMCDZT"
+      src="corn.jpg"
+    />
+    <form
+      class="sc-hKwDye jQZEwW"
+    >
+      <fieldset
+        style="display: flex; gap: 1.5em;"
+      >
+        <legend>
+          Product type
+        </legend>
+        <label>
+          <input
+            checked=""
+            name="product_type"
+            type="radio"
+            value="SEED_PACKETS"
+          />
+          Seed Packets
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="SEEDLINGS"
+          />
+          Seedlings
+        </label>
+      </fieldset>
+      <div>
+        <label
+          for="count"
+        >
+          Number of seed packets ($
+          4
+           * 
+          4
+           = $
+          16
+          )
+        </label>
+        <br />
+        <input
+          id="count"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-eCImPb hRiWyQ"
+      >
+        Postage = $8
+      </div>
+      <div
+        class="sc-gKclnd bIyqbA"
+      >
+        Total: $
+        24
+      </div>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Product matches the snapshot when seed packets is selected and no number is entered 1`] = `
+<div>
+  <section
+    class="sc-bdvvtL hwPGVL"
+  >
+    <h2
+      class="sc-gsDKAQ cmDmbb"
+    >
+      corn
+    </h2>
+    <img
+      alt="corn"
+      class="sc-dkPtRN kMCDZT"
+      src="corn.jpg"
+    />
+    <form
+      class="sc-hKwDye jQZEwW"
+    >
+      <fieldset
+        style="display: flex; gap: 1.5em;"
+      >
+        <legend>
+          Product type
+        </legend>
+        <label>
+          <input
+            checked=""
+            name="product_type"
+            type="radio"
+            value="SEED_PACKETS"
+          />
+          Seed Packets
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="SEEDLINGS"
+          />
+          Seedlings
+        </label>
+      </fieldset>
+      <div>
+        <label
+          for="count"
+        >
+          Number of seed packets ($
+          4
+           * 
+          0
+           = $
+          0
+          )
+        </label>
+        <br />
+        <input
+          id="count"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-eCImPb hRiWyQ"
+      >
+        Postage = $8
+      </div>
+      <div
+        class="sc-gKclnd bIyqbA"
+      >
+        Please enter a number to see the total
+      </div>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Product matches the snapshot when seedlings is selected and a number is entered 1`] = `
+<div>
+  <section
+    class="sc-bdvvtL hwPGVL"
+  >
+    <h2
+      class="sc-gsDKAQ cmDmbb"
+    >
+      corn
+    </h2>
+    <img
+      alt="corn"
+      class="sc-dkPtRN kMCDZT"
+      src="corn.jpg"
+    />
+    <form
+      class="sc-hKwDye jQZEwW"
+    >
+      <fieldset
+        style="display: flex; gap: 1.5em;"
+      >
+        <legend>
+          Product type
+        </legend>
+        <label>
+          <input
+            checked=""
+            name="product_type"
+            type="radio"
+            value="SEED_PACKETS"
+          />
+          Seed Packets
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="SEEDLINGS"
+          />
+          Seedlings
+        </label>
+      </fieldset>
+      <div>
+        <label
+          for="count"
+        >
+          Number of seedlings ($
+          8
+           * 
+          4
+           = $
+          32
+          )
+        </label>
+        <br />
+        <input
+          id="count"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-eCImPb hRiWyQ"
+      >
+        Postage = $
+        32
+      </div>
+      <div
+        class="sc-gKclnd bIyqbA"
+      >
+        Total: $
+        64
+      </div>
+    </form>
+  </section>
+</div>
+`;
+
+exports[`Product matches the snapshot when seedlings is selected and no number is entered 1`] = `
+<div>
+  <section
+    class="sc-bdvvtL hwPGVL"
+  >
+    <h2
+      class="sc-gsDKAQ cmDmbb"
+    >
+      corn
+    </h2>
+    <img
+      alt="corn"
+      class="sc-dkPtRN kMCDZT"
+      src="corn.jpg"
+    />
+    <form
+      class="sc-hKwDye jQZEwW"
+    >
+      <fieldset
+        style="display: flex; gap: 1.5em;"
+      >
+        <legend>
+          Product type
+        </legend>
+        <label>
+          <input
+            checked=""
+            name="product_type"
+            type="radio"
+            value="SEED_PACKETS"
+          />
+          Seed Packets
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="SEEDLINGS"
+          />
+          Seedlings
+        </label>
+      </fieldset>
+      <div>
+        <label
+          for="count"
+        >
+          Number of seedlings ($
+          8
+           * 
+          0
+           = $
+          0
+          )
+        </label>
+        <br />
+        <input
+          id="count"
+          type="number"
+          value=""
+        />
+      </div>
+      <div
+        class="sc-eCImPb hRiWyQ"
+      >
+        Postage = $
+        0
+      </div>
+      <div
+        class="sc-gKclnd bIyqbA"
+      >
+        Please enter a number to see the total
+      </div>
+    </form>
+  </section>
+</div>
+`;
