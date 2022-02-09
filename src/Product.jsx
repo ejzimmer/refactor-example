@@ -4,6 +4,7 @@ import { fetchPostage } from "./fetchPostage"
 import { useState, useEffect } from "react"
 import styled from "styled-components"
 import { PRICES } from "./prices"
+import { Postage } from "./Postage"
 import { NumberInput } from "./NumberInput"
 
 export function Product({ product }) {
@@ -24,10 +25,14 @@ export function Product({ product }) {
   }, [productType, count])
 
   const calculatePostage = async () => {
-    if (productType == "SEED_PACKETS") return
+    if (productType == "SEED_PACKETS") {
+      setPostage(8)
+      return
+    }
 
     if (!count) {
       setPostage(0)
+      return
     }
 
     const postage = await fetchPostage(count)
@@ -50,14 +55,7 @@ export function Product({ product }) {
             onCountChange={handleCountChange}
           />
         </div>
-        {productType == "SEED_PACKETS" && <Postage>Postage = $8</Postage>}
-        {productType != "SEED_PACKETS" && postage >= 0 ? (
-          <Postage>Postage = ${postage}</Postage>
-        ) : (
-          productType != "SEED_PACKETS" && (
-            <Error>Could not calculate postage. Please contact us.</Error>
-          )
-        )}
+        <Postage postage={postage} />
 
         {count === "" ? (
           <Total>Please enter a number to see the total</Total>
@@ -92,12 +90,6 @@ const Form = styled.form`
   gap: 20px;
 `
 
-const Postage = styled.div`
-  color: green;
-`
-const Error = styled.div`
-  color: red;
-`
 const Total = styled.div`
   font-weight: bold;
 `

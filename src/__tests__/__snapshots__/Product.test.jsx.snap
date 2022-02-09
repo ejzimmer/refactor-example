@@ -3,20 +3,20 @@
 exports[`Product matches the snapshot when seed packets is selected and a number is entered 1`] = `
 <div>
   <section
-    class="sc-bdvvtL hwPGVL"
+    class="sc-dkPtRN nDuhm"
   >
     <h2
-      class="sc-gsDKAQ cmDmbb"
+      class="sc-hKwDye hGlFEk"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-dkPtRN kMCDZT"
+      class="sc-eCImPb fgWRvk"
       src="corn.jpg"
     />
     <form
-      class="sc-hKwDye jQZEwW"
+      class="sc-jRQBWg kUMRfR"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -64,9 +64,10 @@ exports[`Product matches the snapshot when seed packets is selected and a number
         />
       </div>
       <div
-        class="sc-eCImPb hRiWyQ"
+        class="sc-bdvvtL iGuzkS"
       >
-        Postage = $8
+        Postage = $
+        8
       </div>
       <div
         class="sc-gKclnd bIyqbA"
@@ -82,20 +83,20 @@ exports[`Product matches the snapshot when seed packets is selected and a number
 exports[`Product matches the snapshot when seed packets is selected and no number is entered 1`] = `
 <div>
   <section
-    class="sc-bdvvtL hwPGVL"
+    class="sc-dkPtRN nDuhm"
   >
     <h2
-      class="sc-gsDKAQ cmDmbb"
+      class="sc-hKwDye hGlFEk"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-dkPtRN kMCDZT"
+      class="sc-eCImPb fgWRvk"
       src="corn.jpg"
     />
     <form
-      class="sc-hKwDye jQZEwW"
+      class="sc-jRQBWg kUMRfR"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -143,9 +144,10 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
         />
       </div>
       <div
-        class="sc-eCImPb hRiWyQ"
+        class="sc-bdvvtL iGuzkS"
       >
-        Postage = $8
+        Postage = $
+        8
       </div>
       <div
         class="sc-gKclnd bIyqbA"
@@ -160,20 +162,20 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
 exports[`Product matches the snapshot when seedlings is selected and a number is entered 1`] = `
 <div>
   <section
-    class="sc-bdvvtL hwPGVL"
+    class="sc-dkPtRN nDuhm"
   >
     <h2
-      class="sc-gsDKAQ cmDmbb"
+      class="sc-hKwDye hGlFEk"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-dkPtRN kMCDZT"
+      class="sc-eCImPb fgWRvk"
       src="corn.jpg"
     />
     <form
-      class="sc-hKwDye jQZEwW"
+      class="sc-jRQBWg kUMRfR"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -221,7 +223,7 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
         />
       </div>
       <div
-        class="sc-eCImPb hRiWyQ"
+        class="sc-bdvvtL iGuzkS"
       >
         Postage = $
         32
@@ -240,20 +242,20 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
 exports[`Product matches the snapshot when seedlings is selected and no number is entered 1`] = `
 <div>
   <section
-    class="sc-bdvvtL hwPGVL"
+    class="sc-dkPtRN nDuhm"
   >
     <h2
-      class="sc-gsDKAQ cmDmbb"
+      class="sc-hKwDye hGlFEk"
     >
       corn
     </h2>
     <img
       alt="corn"
-      class="sc-dkPtRN kMCDZT"
+      class="sc-eCImPb fgWRvk"
       src="corn.jpg"
     />
     <form
-      class="sc-hKwDye jQZEwW"
+      class="sc-jRQBWg kUMRfR"
     >
       <fieldset
         style="display: flex; gap: 1.5em;"
@@ -301,7 +303,7 @@ exports[`Product matches the snapshot when seedlings is selected and no number i
         />
       </div>
       <div
-        class="sc-eCImPb hRiWyQ"
+        class="sc-bdvvtL iGuzkS"
       >
         Postage = $
         0
