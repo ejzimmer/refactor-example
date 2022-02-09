@@ -7,7 +7,7 @@ import { PRICES } from "./prices"
 
 export function Product({ product }) {
   const [productType, setProductType] = useState("SEED_PACKETS")
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState("")
   const [postage, setPostage] = useState(0)
 
   const handleProductTypeChange = (productType) => {
@@ -25,7 +25,7 @@ export function Product({ product }) {
   const calculatePostage = async () => {
     if (productType == "SEED_PACKETS") return
 
-    if (count == 0) {
+    if (!count) {
       setPostage(0)
     }
 
@@ -45,14 +45,14 @@ export function Product({ product }) {
         <div>
           {productType == "SEED_PACKETS" && (
             <label htmlFor="count">
-              Number of seed packets (${PRICES.SEED_PACKETS} * {count} = $
-              {PRICES.SEED_PACKETS * count})
+              Number of seed packets (${PRICES.SEED_PACKETS} * {count || 0} = $
+              {PRICES.SEED_PACKETS * count || 0})
             </label>
           )}
           {productType == "SEEDLINGS" && (
             <label htmlFor="count">
-              Number of seedlings (${PRICES.SEEDLINGS} * {count} = $
-              {PRICES.SEEDLINGS * count})
+              Number of seedlings (${PRICES.SEEDLINGS} * {count || 0} = $
+              {PRICES.SEEDLINGS * count || 0})
             </label>
           )}
           <br />
@@ -64,17 +64,19 @@ export function Product({ product }) {
           />
         </div>
         {productType == "SEED_PACKETS" && <Postage>Postage = $8</Postage>}
-        {productType != "SEED_PACKETS" && postage >= 0 && (
+        {productType != "SEED_PACKETS" && postage >= 0 ? (
           <Postage>Postage = ${postage}</Postage>
-        )}
-        {productType != "SEED_PACKETS" && postage < 0 && (
-          <Error>Could not calculate postage. Please contact us.</Error>
+        ) : (
+          productType != "SEED_PACKETS" && (
+            <Error>Could not calculate postage. Please contact us.</Error>
+          )
         )}
 
-        {productType == "SEED_PACKETS" && (
+        {count === "" ? (
+          <Total>Please enter a number to see the total</Total>
+        ) : productType == "SEED_PACKETS" ? (
           <Total>Total: ${PRICES.SEED_PACKETS * count + 8}</Total>
-        )}
-        {productType != "SEED_PACKETS" && (
+        ) : (
           <Total>Total: ${PRICES.SEEDLINGS * count + postage}</Total>
         )}
       </Form>
