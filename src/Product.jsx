@@ -4,6 +4,7 @@ import { fetchPostage } from "./fetchPostage"
 import { useState, useEffect } from "react"
 import styled from "styled-components"
 import { PRICES } from "./prices"
+import { NumberInput } from "./NumberInput"
 
 export function Product({ product }) {
   const [productType, setProductType] = useState("SEED_PACKETS")
@@ -43,24 +44,10 @@ export function Product({ product }) {
           value={productType}
         />
         <div>
-          {productType == "SEED_PACKETS" && (
-            <label htmlFor="count">
-              Number of seed packets (${PRICES.SEED_PACKETS} * {count || 0} = $
-              {PRICES.SEED_PACKETS * count || 0})
-            </label>
-          )}
-          {productType == "SEEDLINGS" && (
-            <label htmlFor="count">
-              Number of seedlings (${PRICES.SEEDLINGS} * {count || 0} = $
-              {PRICES.SEEDLINGS * count || 0})
-            </label>
-          )}
-          <br />
-          <input
-            id="count"
-            type="number"
-            onChange={handleCountChange}
-            value={count}
+          <NumberInput
+            productType={productType}
+            count={count}
+            onCountChange={handleCountChange}
           />
         </div>
         {productType == "SEED_PACKETS" && <Postage>Postage = $8</Postage>}

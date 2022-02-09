@@ -46,7 +46,9 @@ exports[`Product matches the snapshot when seed packets is selected and a number
         <label
           for="count"
         >
-          Number of seed packets ($
+          Number of 
+          seed packets
+           ($
           4
            * 
           4
@@ -123,7 +125,9 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
         <label
           for="count"
         >
-          Number of seed packets ($
+          Number of 
+          seed packets
+           ($
           4
            * 
           0
@@ -199,7 +203,9 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
         <label
           for="count"
         >
-          Number of seedlings ($
+          Number of 
+          seedlings
+           ($
           8
            * 
           4
@@ -277,7 +283,9 @@ exports[`Product matches the snapshot when seedlings is selected and no number i
         <label
           for="count"
         >
-          Number of seedlings ($
+          Number of 
+          seedlings
+           ($
           8
            * 
           0
