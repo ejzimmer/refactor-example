@@ -82,6 +82,32 @@ describe("NumberInput component", () => {
       })
     })
   })
+
+  describe("when the productType is plants", () => {
+    describe("when there is no number", () => {
+      it("shows unit price and $0", () => {
+        render(
+          <NumberInput
+            productType="PLANTS"
+            count=""
+            onCountChange={jest.fn()}
+          />
+        )
+
+        expect(getLabel()).toHaveTextContent("Number of plants ($15 * 0 = $0)")
+      })
+    })
+
+    describe("when an amount is entered", () => {
+      it("when there is a number", () => {
+        render(<NumberInput productType="PLANTS" count="12" />)
+
+        expect(getLabel()).toHaveTextContent(
+          "Number of plants ($15 * 12 = $180)"
+        )
+      })
+    })
+  })
 })
 
 const getLabel = () => screen.getByText(/Number of/)

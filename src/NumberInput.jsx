@@ -3,6 +3,7 @@ import { PRICES } from "./prices"
 const productNames = {
   SEED_PACKETS: "seed packets",
   SEEDLINGS: "seedlings",
+  PLANTS: "plants",
 }
 export function NumberInput({ productType, count, onCountChange }) {
   const price = PRICES[productType]
