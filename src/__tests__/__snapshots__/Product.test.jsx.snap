@@ -41,6 +41,14 @@ exports[`Product matches the snapshot when seed packets is selected and a number
           />
           Seedlings
         </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="PLANTS"
+          />
+          Plants
+        </label>
       </fieldset>
       <div>
         <label
@@ -121,6 +129,14 @@ exports[`Product matches the snapshot when seed packets is selected and no numbe
           />
           Seedlings
         </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="PLANTS"
+          />
+          Plants
+        </label>
       </fieldset>
       <div>
         <label
@@ -199,6 +215,14 @@ exports[`Product matches the snapshot when seedlings is selected and a number is
             value="SEEDLINGS"
           />
           Seedlings
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="PLANTS"
+          />
+          Plants
         </label>
       </fieldset>
       <div>
@@ -279,6 +303,14 @@ exports[`Product matches the snapshot when seedlings is selected and no number i
             value="SEEDLINGS"
           />
           Seedlings
+        </label>
+        <label>
+          <input
+            name="product_type"
+            type="radio"
+            value="PLANTS"
+          />
+          Plants
         </label>
       </fieldset>
       <div>

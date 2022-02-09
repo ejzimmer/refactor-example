@@ -3,6 +3,7 @@ import React from "react"
 const productNames = {
   SEED_PACKETS: "Seed Packets",
   SEEDLINGS: "Seedlings",
+  PLANTS: "Plants",
 }
 
 export function ProductTypeSelector({ onChange, value }) {

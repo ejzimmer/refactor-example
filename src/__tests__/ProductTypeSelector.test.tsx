@@ -25,6 +25,10 @@ describe("ProductTypeSelector", () => {
       clickRadioButton("Seed Packets")
 
       expect(onChange).toHaveBeenCalledWith("SEED_PACKETS")
+
+      clickRadioButton("Plants")
+
+      expect(onChange).toHaveBeenCalledWith("PLANTS")
     })
   })
 })
