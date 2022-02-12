@@ -14,8 +14,8 @@ export function Product({ product }) {
     setProductType(productType)
   }
 
-  const handleCountChange = (event) => {
-    setCount(event.currentTarget.value)
+  const handleCountChange = (count) => {
+    setCount(count)
   }
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export function Product({ product }) {
           <input
             id="count"
             type="number"
-            onChange={handleCountChange}
+            onChange={(event) => handleCountChange(event.target.value)}
             value={count}
           />
         </div>
