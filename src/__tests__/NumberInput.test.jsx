@@ -17,7 +17,7 @@ xdescribe("NumberInput component", () => {
     })
   })
 
-  describe("when the productType is seeds", () => {
+  describe("when the productType is seed packets", () => {
     it("shows unit price and $0 when no number is entered", () => {
       render(
         <NumberInput productType="SEED_PACKETS" count="" onChange={jest.fn()} />
