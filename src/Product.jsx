@@ -1,3 +1,4 @@
+import React from "react"
 import "./App.css"
 import { ProductTypeSelector } from "./ProductTypeSelector"
 import { fetchPostage } from "./fetchPostage"
