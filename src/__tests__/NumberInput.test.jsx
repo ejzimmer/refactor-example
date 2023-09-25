@@ -3,16 +3,16 @@ import { render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { NumberInput } from "../Product"
 
-xdescribe("NumberInput component", () => {
+describe("NumberInput component", () => {
   describe("when the number changes", () => {
-    it("calls the onChange handler", () => {
+    it("calls the onChange handler", async () => {
       const onChange = jest.fn()
       render(
         <NumberInput productType="SEED_PACKETS" count="" onChange={onChange} />
       )
 
       const input = screen.getByRole("spinbutton")
-      userEvent.type(input, "4")
+      await userEvent.type(input, "4")
 
       expect(onChange).toHaveBeenCalledWith("4")
     })
@@ -63,6 +63,26 @@ xdescribe("NumberInput component", () => {
       const label = screen.getByText(/Number of/)
 
       expect(label).toHaveTextContent("Number of seedlings ($8 * 12 = $96)")
+    })
+  })
+
+  describe("when the productType is plants", () => {
+    it("when no amount is entered it shows unit price and $0", () => {
+      render(<NumberInput productType="PLANTS" count="" onChange={jest.fn()} />)
+
+      const label = screen.getByText(/Number of/)
+
+      expect(label).toHaveTextContent("Number of plants ($15 * 0 = $0)")
+    })
+
+    it("shows unit amount and subtotal when a number is entered", () => {
+      render(
+        <NumberInput productType="PLANTS" count="12" onChange={jest.fn()} />
+      )
+
+      const label = screen.getByText(/Number of/)
+
+      expect(label).toHaveTextContent("Number of plants ($15 * 12 = $180)")
     })
   })
 })

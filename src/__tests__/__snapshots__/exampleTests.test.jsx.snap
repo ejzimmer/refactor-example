@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfo matches the snapshot 1`] = `
+<div>
+  <div>
+    Bob
+     was born on 
+    1990-01-2
+     (
+    Tuesday
+    )
+  </div>
+</div>
+`;

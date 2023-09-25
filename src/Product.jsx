@@ -43,27 +43,11 @@ export function Product({ product }) {
           onChange={handleProductTypeChange}
           value={productType}
         />
-        <div>
-          {productType == "SEED_PACKETS" && (
-            <label htmlFor="count">
-              Number of seed packets (${PRICES.SEED_PACKETS} * {count || 0} = $
-              {PRICES.SEED_PACKETS * count || 0})
-            </label>
-          )}
-          {productType == "SEEDLINGS" && (
-            <label htmlFor="count">
-              Number of seedlings (${PRICES.SEEDLINGS} * {count || 0} = $
-              {PRICES.SEEDLINGS * count || 0})
-            </label>
-          )}
-          <br />
-          <input
-            id="count"
-            type="number"
-            onChange={(event) => handleCountChange(event.target.value)}
-            value={count}
-          />
-        </div>
+        <NumberInput
+          productType={productType}
+          count={count}
+          onChange={handleCountChange}
+        />
         {productType == "SEED_PACKETS" && <Postage>Postage = $8</Postage>}
         {productType != "SEED_PACKETS" && postage >= 0 ? (
           <Postage>Postage = ${postage}</Postage>
@@ -82,6 +66,30 @@ export function Product({ product }) {
         )}
       </Form>
     </Container>
+  )
+}
+
+const NAMES = {
+  SEED_PACKETS: "seed packets",
+  SEEDLINGS: "seedlings",
+  PLANTS: "plants",
+}
+
+export function NumberInput({ productType, count, onChange }) {
+  return (
+    <div>
+      <label htmlFor="count">
+        Number of {NAMES[productType]} (${PRICES[productType]} * {count || 0} =
+        ${PRICES[productType] * count || 0})
+      </label>
+      <br />
+      <input
+        id="count"
+        type="number"
+        onChange={(event) => onChange(event.target.value)}
+        value={count}
+      />
+    </div>
   )
 }
 
